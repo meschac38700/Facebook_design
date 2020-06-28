@@ -41,11 +41,14 @@ if(!window.location.origin.includes("127.0.0.1"))
     fetch(api_url)
         .then(d => d.json())
         .then(res => {
-            all_friends_img.forEach(img =>{
-                img.src = res.faces[i].urls[4][512];
-                i++;
-                if(i == res.faces.length)
-                    i = 0;
-            })
+            if(res)
+            {
+                all_friends_img.forEach(img =>{
+                    img.src = res.faces[i].urls[4][512];
+                    i++;
+                    if(i == res.faces.length)
+                        i = 0;
+                })
+            }
         });
 }
