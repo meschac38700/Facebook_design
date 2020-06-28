@@ -28,3 +28,24 @@ left_sidebar_items.forEach(item =>
         this.classList.add("active")
     })   
 })
+
+
+// Set different friend image 
+
+let all_friends_img = document.querySelectorAll(".contacts .list_friends .profile_img");
+let i = 0;
+
+if(!window.location.origin.includes("127.0.0.1"))
+{
+    let api_url = `https://api.generated.photos/api/v1/faces?api_key=BecfcPu_U9cI9swhnd1iSw&per_page=${all_friends_img.length}`;
+    fetch(api_url)
+        .then(d => d.json())
+        .then(res => {
+            all_friends_img.forEach(img =>{
+                img.src = res.faces[i].urls[4][512];
+                i++;
+                if(i == res.faces.length)
+                    i = 0;
+            })
+        });
+}
