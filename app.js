@@ -17,3 +17,14 @@ onlines.forEach(online =>{
 })
 
 
+let left_sidebar_items = document.querySelectorAll(".main_container .main_left_sidebar .account_options__items");
+
+left_sidebar_items.forEach(item =>
+{
+    item.addEventListener("click", function(e)
+    {
+        e.preventDefault();
+        document.querySelector(".main_container .main_left_sidebar").querySelector(".active").classList.remove("active");
+        this.classList.add("active")
+    })   
+})

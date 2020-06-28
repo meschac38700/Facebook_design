@@ -25,7 +25,7 @@ html, body{
     line-height: 1.4;
     color: var(--primary-color);
     font-weight: 500;
-    font-size: 14px;
+    font-size: 13px;
     background-color: var(--bg-color);
     overflow: hidden;
 }
@@ -180,13 +180,19 @@ a{
     width: 220px;
     font-size: 13px;
 }
-
+.main_container .main_left_sidebar{width: 200px;}
 .main_container .main_left_sidebar .account_options__items
 {
     display: flex;
     justify-content: space-between;
     align-items: center;
     line-height: 2.1;
+    cursor: pointer;
+}
+.main_container .main_left_sidebar .account_options__items.active,
+.main_container .main_left_sidebar .account_options__items:hover{
+    background: #f5f6f7;
+    border: #dddfe2;
 }
 .main_left_sidebar .account_options__items .account_options_links{
     display: flex;
@@ -194,7 +200,7 @@ a{
     overflow-y: hidden;
 }
 .main_left_sidebar h4{
-    margin-top: 1.5em;
+    margin-top: 1em;
     font-weight: 600;
     line-height: 1;
     margin-left: 5px;
@@ -222,21 +228,43 @@ a{
     height: 5000px;
 }
 .profile_link{
-    margin-bottom: 1em;
+    margin-bottom: .5em;
 }
 .account_options__items .account_options_links img.profile_img{
     border-radius: 50%;
 }
 
-.account_options_links .account_option_links_img_container .account_options_links_img.fil_actu{
-    
+.account_options_links .account_option_links_img_container .account_options_links_img.fil_actu{  
     transform: translate(-20px, -1675px);
+}
+.account_options_links .account_option_links_img_container .account_options_links_img.options{  
+    transform: translate(-20px, -1948px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.msn{
     transform: translate(-72px, -1104px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.watch{
     transform: translate(-19px, -1801px);
+}
+.watch_icon{
+    position: relative;
+    width: 100%;
+    display: inline-block;
+}
+.watch_icon::after{
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fa3e3e;
+    position: absolute;
+    right: 5px;
+}
+.nb
+{
+    color: var(--light-gray-color);
+    font-size: 11px;
+    margin-right: 5px;
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.market{
     transform: translate(-62px, -1654px);
