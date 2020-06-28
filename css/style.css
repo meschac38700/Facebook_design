@@ -349,12 +349,18 @@ a{
     transform: translate(-15px, -2313px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.video{
-    transform: translate(-72px, -1164px);
-}.account_options_links .account_option_links_img_container .account_options_links_img.photo{
-    transform: translate(-72px, -1164px);
-}.account_options_links .account_option_links_img_container .account_options_links_img.friend{
-    transform: translate(-72px, -1164px);
+    transform: translate(-74px, -1166px);
 }
+.account_options_links .account_option_links_img_container .account_options_links_img.photo{
+    transform: translate(-62px, -1696px);
+}
+.account_options_links .account_option_links_img_container .account_options_links_img.friend{
+    transform: translate(-41px, -1613px);
+}
+.account_options_links .account_option_links_img_container .account_options_links_img.more{
+    transform: translate(-20px, -1885px);
+}
+
 
 .contacts .account_option_links_img_container
 {
@@ -404,9 +410,6 @@ a{
     overflow-x: hidden;
     height:100vh;
     max-width: 535px;
-}
-.main_content .marger{
-    margin-bottom: 100px;
 }
 /*  HIDE Scrollbar */
  /* Hide scrollbar for Chrome, Safari and Opera */
@@ -481,16 +484,32 @@ a{
 .main_content .card_footer ul
 {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    padding-bottom: .6em;
+    font-size: 12px;
 }
 
+.main_content .card_footer .account_options__items:not(:last-child)
+{
+    margin-right: 5px;
+}
 .main_content .card_footer .account_options__items
 {
     background-color: var(--gray-medium);
-    border-radius: 25%;
-    margin-right: 5pxpx;
+    border-radius: 20px;
+    padding: .5em .8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.main_content .card_footer .account_options__items .account_options_links
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .main_container .main_right_sidebar
 {
