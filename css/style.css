@@ -501,7 +501,8 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: .6em;
+    padding: 0 15px;
+    padding-bottom: .8em;
     font-size: 12px;
 }
 
@@ -513,7 +514,7 @@ a{
 {
     background-color: var(--gray-medium);
     border-radius: 20px;
-    padding: .5em .8em;
+    padding: .5em;
     display: flex;
     align-items: center;
     justify-content: center;
