@@ -580,16 +580,18 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 .main_content .room_card_body .room:not(:first-child) .room_overlay
 {
     position: absolute;
-    height: 10px;
-    width: 10px;
+    height: 12px;
+    width: 12px;
     border-radius: 50%;
     background-color: var(--green-online);
     bottom: 0px;
     right: 0px;
+    border: 2px solid #fff;
 }
 .main_content .room_card_body .room:first-child .room_overlay::after
 {
