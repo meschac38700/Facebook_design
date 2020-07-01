@@ -33,8 +33,8 @@ left_sidebar_items.forEach(item =>
 // Set different friend image 
 
 let all_friends_img = document.querySelectorAll(".contacts .list_friends .profile_img");
+let all_room_img = document.querySelectorAll(".room_card .room_card_body .room:not(:first-child) img");
 let i = 0;
-
 if(!window.location.origin.includes("127.0.0.1"))
 {
     let api_url = `https://api.generated.photos/api/v1/faces?api_key=BecfcPu_U9cI9swhnd1iSw&per_page=${all_friends_img.length}`;
@@ -43,12 +43,19 @@ if(!window.location.origin.includes("127.0.0.1"))
         .then(res => {
             if(res)
             {
+                all_room_img.forEach(img =>
+                {
+                    img.src = res.faces[i].urls[4][512];
+                    i++;
+                    if(i == res.faces.length)
+                        i = 0;
+                });
                 all_friends_img.forEach(img =>{
                     img.src = res.faces[i].urls[4][512];
                     i++;
                     if(i == res.faces.length)
                         i = 0;
-                })
+                });
             }
         });
 }
