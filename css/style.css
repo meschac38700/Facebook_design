@@ -554,7 +554,7 @@ a{
     max-width: 40px;
     max-height: 40px;
     position: relative;
-    margin-right: 10px;
+    margin-right: 15px;
     cursor: pointer;
 }
 .main_content .room_card_body .room:last-child{
@@ -680,6 +680,12 @@ a{
     display: inline-block;
     width: 22px;
 }
+.post_card_footer .account_options_links .account_option_links_img_container .account_options_links_img
+{
+    background-image: url("../img/fb_icon4.png");
+    width: 600px;
+    height: 200px;
+}
 .post_likes_comments .account_options_links .account_option_links_img_container .account_options_links_img.likes_thumb
 {
     transform: translate(1px, -2031px);
@@ -691,6 +697,19 @@ a{
 .post_likes_comments .account_options_links .account_option_links_img_container .account_options_links_img.likes_solidarity
 {
     transform: translate(-62px, -2032px);
+}
+
+.post_card_footer .account_options_links .account_option_links_img_container .account_options_links_img.like
+{
+    transform: translate(-203px, -75px);
+}
+.post_card_footer .account_options_links .account_option_links_img_container .account_options_links_img.comment
+{
+    transform: translate(-128px, -75px);
+}
+.post_card_footer .account_options_links .account_option_links_img_container .account_options_links_img.share
+{
+    transform: translate(-272px, -75px);
 }
 
 .post_card .post_card_footer ul
