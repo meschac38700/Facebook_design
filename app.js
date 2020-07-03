@@ -34,6 +34,7 @@ left_sidebar_items.forEach(item =>
 
 let all_friends_img = document.querySelectorAll(".contacts .list_friends .profile_img");
 let all_room_img = document.querySelectorAll(".room_card .room_card_body .room:not(:first-child) img");
+let storie_img = document.querySelectorAll(".stories_card_body_item .profile_img img");
 let i = 0;
 if(!window.location.origin.includes("127.0.0.1"))
 {
@@ -43,6 +44,13 @@ if(!window.location.origin.includes("127.0.0.1"))
         .then(res => {
             if(res)
             {
+                storie_img.forEach(img =>
+                {
+                    img.src = res.faces[i].urls[4][512];
+                    i++;
+                    if(i == res.faces.length)
+                        i = 0;
+                });
                 all_room_img.forEach(img =>
                 {
                     img.src = res.faces[i].urls[4][512];
@@ -73,6 +81,7 @@ exit_modal_mode.addEventListener("click", ()=>{
     let modal_bg = document.querySelector(".modal_bg");
     document.body.removeChild(modal_bg);
 });
+
 let new_post_field = document.querySelector(".card.new_post_card #post.new_post");
 new_post_field.addEventListener("focus", () =>
 {
