@@ -30,7 +30,10 @@ html, body{
     overflow: hidden;
     position: relative;
 }
-
+::placeholder {
+    color: var(--light-gray-color);
+    opacity: 1; /* Firefox */
+}
 .title_seconday{
     color: var(--secondary-color);
     font-weight: 700;
@@ -500,7 +503,7 @@ body.modal_open_img .modal_bg
 .main_content .post_card:last-child{
     margin-bottom: 100px;
 }
-.main_content .card .card_head{
+.main_content .card .new_post_head{
     background-color: var(--gray-medium);
     padding: .5em;
     border-bottom: 1px solid var(--border-gray-color);   
@@ -508,11 +511,11 @@ body.modal_open_img .modal_bg
     justify-content: space-between;
     align-items: center;
 }
-.card_head .account_options_links .account_option_links_img_container .account_options_links_img
+.new_post_head .account_options_links .account_option_links_img_container .account_options_links_img
 {
     display: none;
 }
-body.modal_open .card_head .account_options_links .account_option_links_img_container .account_options_links_img
+body.modal_open .new_post_head .account_options_links .account_option_links_img_container .account_options_links_img
 {
     display: inline-block;
     background-image: url("../img/fb-icons3.png");
@@ -538,6 +541,7 @@ body.modal_open .card_head .account_options_links .account_option_links_img_cont
     width: 45px;
     border-radius: 50%;
 }
+
 .main_content .card_body .new_post
 {
     flex-grow: 2;
@@ -588,7 +592,7 @@ body.modal_open .card_head .account_options_links .account_option_links_img_cont
     justify-content: center;
 }
 
-.main_content .room_card_header
+.main_content .card_header
 {
     display: flex;
     justify-content: space-between;
@@ -596,12 +600,13 @@ body.modal_open .card_head .account_options_links .account_option_links_img_cont
     padding: .6em 1em;
     font-size: 14px;
 }
-.main_content .room_card_header .create_room
+.main_content .card_header .create_room
 {
     color: var(--primary);
     font-weight: 500;
     font-size: 12px;
 }
+.main_content .room_card{border-radius: 10px;}
 .main_content .room_card_body{
     display: flex;
     overflow-x: auto;
@@ -665,6 +670,120 @@ body.modal_open .card_head .account_options_links .account_option_links_img_cont
     font-size: 32px;
 }
 
+/* STORIES */
+.stories_card {
+    border-radius: 4px;
+}
+.stories_card .stories_card_body
+{
+    padding-bottom: 1em;
+    overflow-x: auto;
+}
+.stories_card .stories_card_body ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+}
+.stories_card .stories_card_body_item:not(:last-child)
+{
+    margin-right: .6em;
+}
+.stories_card .stories_card_body_item
+{
+    display: inline-block;
+    height: 210px;
+    width: 110px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    font-weight: 600;
+}
+.stories_card .storie_bg_image
+{
+    background-image: url("https://thispersondoesnotexist.com/image");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    /* Firefox */
+    -moz-transition: transform .3s;
+    /* WebKit */
+    -webkit-transition: transform .3s;
+    /* Opera */
+    -o-transition: transform .3s;
+    /* Standard */
+    transition: transform .3s;
+}
+.stories_card  .stories_card_body_item:not(:first-child) .storie_bg_image
+{
+    background-image:url("https://picsum.photos/350/200/?random");
+}
+
+.stories_card .storie_bg_image .overlay
+{
+    background-color: rgba(0,0,0,.3);
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity .3s;
+}
+.stories_card .storie_bg_image:hover .overlay{
+    opacity: 1;
+}
+.stories_card .storie_bg_image:hover
+{
+    transform: scale(1.04);
+}
+.stories_card  .stories_card_body_item .add_story{display: none;}
+.stories_card  .stories_card_body_item .profile_img,
+.stories_card  .stories_card_body_item .add_story
+{
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+.stories_card  .stories_card_body_item:first-child .profile_img img{display: none;}
+.stories_card  .stories_card_body_item:first-child .add_story{
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-8px,-8px);
+}
+.stories_card  .stories_card_body_item:first-child .add_story::after
+{
+    content: "+";
+    display: block;
+    font-weight: 400;
+    color: var(--primary);
+    font-size: 40px;
+}
+.stories_card  .stories_card_body_item:not(:first-child) .profile_img
+{
+    border: 4px solid var(--primary);
+}
+.stories_card  .stories_card_body_item .user_name
+{
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+}
+.stories_card .stories_card_body_item .storie_content
+{
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    z-index: 1;
+}
+
+/* END STORIE */
 .main_content .post_card .post_card_head{
     padding: .4em .8em ;
     display: flex;

@@ -67,7 +67,7 @@ modal_bg.classList.add("modal_bg")
 let modal_img_container = document.createElement("DIV");
 let modal_img = document.createElement("IMG");
 
-let exit_modal_mode = document.querySelector(".card_head .account_options_links");
+let exit_modal_mode = document.querySelector(".new_post_head .account_options_links");
 exit_modal_mode.addEventListener("click", ()=>{
     document.body.classList.remove("modal_open");
     let modal_bg = document.querySelector(".modal_bg");
