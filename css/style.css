@@ -175,7 +175,7 @@ a{
 .main{
     flex-grow: 1;
 }
-
+.post_image{cursor: pointer;}
 .modal_bg,
 .main .main_container
 {
