@@ -186,6 +186,16 @@ a{
     display: flex;
     justify-content: space-between;
 }
+.modal_image_container{
+    z-index: 99;
+    width: 950px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+.modal_image_container .modal_big_image{
+    width: 100%;
+}
 
 .main .main_container .new_post_support,
 .main .main_container .new_post_card
@@ -199,13 +209,14 @@ a{
 {
     position: relative;
 }
-body.new_post_focused .card.new_post_card
+body.modal_open .card.new_post_card
 {
     position: absolute;
     width: 100%;
     z-index: 99;
 }
-body.new_post_focused .modal_bg
+body.modal_open .modal_bg,
+body.modal_open_img .modal_bg
 {
     width: unset;
     position: absolute;
@@ -217,6 +228,7 @@ body.new_post_focused .modal_bg
     z-index: 99;
     display: flex;
     justify-content: center;
+    padding: 0;
 }
 .content_wrapper .contacts{
     min-width: 220px;
@@ -500,7 +512,7 @@ body.new_post_focused .modal_bg
 {
     display: none;
 }
-body.new_post_focused .card_head .account_options_links .account_option_links_img_container .account_options_links_img
+body.modal_open .card_head .account_options_links .account_option_links_img_container .account_options_links_img
 {
     display: inline-block;
     background-image: url("../img/fb-icons3.png");
@@ -508,11 +520,10 @@ body.new_post_focused .card_head .account_options_links .account_option_links_im
 }
 .main_content .card_body
 {
-    padding: 1em 4em 0 1em;
+    padding: 1em 1em 0 1em;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 .main_content .separator
 {
@@ -539,6 +550,8 @@ body.new_post_focused .card_head .account_options_links .account_option_links_im
 
     -ms-overflow-style: none;
     scrollbar-width: none; 
+    width: 100%;
+    transform: translateY(5px);
 }
 .main_content .card_body .new_post::-webkit-scrollbar
 {
