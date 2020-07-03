@@ -1,4 +1,4 @@
-html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select,textarea{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}td:not([align]),th:not([align]){text-align:left}
+html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select,textarea{margin:0}html{-webkit-box-sizing:border-box;box-sizing:border-box}*,*::before,*::after{-webkit-box-sizing:inherit;box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}td:not([align]),th:not([align]){text-align:left}
 
 :root{
     --primary: #4267b2;
@@ -17,7 +17,8 @@ html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,ifr
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 html, body{
@@ -29,6 +30,22 @@ html, body{
     background-color: var(--bg-color);
     overflow: hidden;
     position: relative;
+}
+::-webkit-input-placeholder {
+    color: var(--light-gray-color);
+    opacity: 1; /* Firefox */
+}
+::-moz-placeholder {
+    color: var(--light-gray-color);
+    opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder {
+    color: var(--light-gray-color);
+    opacity: 1; /* Firefox */
+}
+::-ms-input-placeholder {
+    color: var(--light-gray-color);
+    opacity: 1; /* Firefox */
 }
 ::placeholder {
     color: var(--light-gray-color);
@@ -47,9 +64,15 @@ html, body{
     position: relative;
     background-color: var(--primary);
     height: 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     overflow: hidden;
     color: var(--header-color);
     font-weight: 600;
@@ -58,8 +81,12 @@ html, body{
 }
 .inline_center_vertical
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 a{
     color: inherit;
@@ -81,7 +108,9 @@ a{
     display: inline-block;
     width: 120px;
     height: 5000px;
-    transform: translate(-49px, -1305px);
+    -webkit-transform: translate(-49px, -1305px);
+        -ms-transform: translate(-49px, -1305px);
+            transform: translate(-49px, -1305px);
 }
 .header_container .form_wrapper{
     height: 25px;
@@ -119,8 +148,12 @@ a{
 .header_navigation .header_navigation__links,
 .header_navigation .profile_img_container,
 .header_navigation__links__item{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 25px;
     overflow-y: hidden;
 }
@@ -149,34 +182,52 @@ a{
 }
 
 .header_navigation__links__item .invitation .icon_image{
-    transform: translate(-50px, 1025px);
+    -webkit-transform: translate(-50px, 1025px);
+        -ms-transform: translate(-50px, 1025px);
+            transform: translate(-50px, 1025px);
 }
 .header_navigation__links__item .message .icon_image{
-    transform: translate(-25px, 1075px);
+    -webkit-transform: translate(-25px, 1075px);
+        -ms-transform: translate(-25px, 1075px);
+            transform: translate(-25px, 1075px);
 }
 .header_navigation__links__item .notification .icon_image{
-    transform: translate(-24px, 1050px);
+    -webkit-transform: translate(-24px, 1050px);
+        -ms-transform: translate(-24px, 1050px);
+            transform: translate(-24px, 1050px);
 }
 .header_navigation__links__item .account .icon_image{
     background-image: url("../img/fb_icons2.png");
     width: 25px;
-    transform: translateY(63px);
+    -webkit-transform: translateY(63px);
+        -ms-transform: translateY(63px);
+            transform: translateY(63px);
 }
 .header_navigation__links__item .help .icon_image{
-    transform: translate(1px, 975px);
+    -webkit-transform: translate(1px, 975px);
+        -ms-transform: translate(1px, 975px);
+            transform: translate(1px, 975px);
 }
 
 .header_navigation__links__item .options .icon_image{
-    transform: translate(-2px, 1025px);
+    -webkit-transform: translate(-2px, 1025px);
+        -ms-transform: translate(-2px, 1025px);
+            transform: translate(-2px, 1025px);
 }
 
 .content_wrapper
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .main{
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
 }
 .post_image{cursor: pointer;}
 .modal_bg,
@@ -186,8 +237,12 @@ a{
     max-width: 100%;
     margin: 0 auto;
     padding: 1em 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .modal_image_container{
     z-index: 99;
@@ -211,12 +266,15 @@ a{
 .main .main_container .new_post_card
 {
     position: relative;
+    overflow: hidden;
 }
 body.modal_open .card.new_post_card
 {
     position: absolute;
     width: 100%;
     z-index: 99;
+    -webkit-box-shadow: 4px 4px 4px rgba(0,0,0,.3);
+            box-shadow: 4px 4px 4px rgba(0,0,0,.3);
 }
 body.modal_open .modal_bg,
 body.modal_open_img .modal_bg
@@ -229,8 +287,12 @@ body.modal_open_img .modal_bg
     left: 0;
     background-color: rgba(0,0,0,.45);
     z-index: 99;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 0;
 }
 .content_wrapper .contacts{
@@ -240,9 +302,15 @@ body.modal_open_img .modal_bg
 .main_container .main_left_sidebar{width: 200px;}
 .main_container .main_left_sidebar .account_options__items
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     line-height: 2.1;
     cursor: pointer;
 }
@@ -252,12 +320,20 @@ body.modal_open_img .modal_bg
     border: #dddfe2;
 }
 .account_options_links {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .main_left_sidebar .account_options__items .account_options_links{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     overflow-y: hidden;
 }
 .main_left_sidebar h4{
@@ -284,7 +360,9 @@ body.modal_open_img .modal_bg
     display: inline-block;
     background-image: url("../img/fb_icons.png"); 
     background-repeat: no-repeat;
-    transform: translate(-3px, 3px);
+    -webkit-transform: translate(-3px, 3px);
+        -ms-transform: translate(-3px, 3px);
+            transform: translate(-3px, 3px);
     width: 200px;
     height: 5000px;
 }
@@ -296,16 +374,24 @@ body.modal_open_img .modal_bg
 }
 
 .account_options_links .account_option_links_img_container .account_options_links_img.fil_actu{  
-    transform: translate(-20px, -1675px);
+    -webkit-transform: translate(-20px, -1675px);  
+        -ms-transform: translate(-20px, -1675px);  
+            transform: translate(-20px, -1675px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.options{  
-    transform: translate(-20px, -1948px);
+    -webkit-transform: translate(-20px, -1948px);  
+        -ms-transform: translate(-20px, -1948px);  
+            transform: translate(-20px, -1948px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.msn{
-    transform: translate(-72px, -1104px);
+    -webkit-transform: translate(-72px, -1104px);
+        -ms-transform: translate(-72px, -1104px);
+            transform: translate(-72px, -1104px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.watch{
-    transform: translate(-19px, -1801px);
+    -webkit-transform: translate(-19px, -1801px);
+        -ms-transform: translate(-19px, -1801px);
+            transform: translate(-19px, -1801px);
 }
 .watch_icon{
     position: relative;
@@ -328,7 +414,9 @@ body.modal_open_img .modal_bg
     margin-right: 5px;
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.market{
-    transform: translate(-62px, -1654px);
+    -webkit-transform: translate(-62px, -1654px);
+        -ms-transform: translate(-62px, -1654px);
+            transform: translate(-62px, -1654px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.club,
 .account_options_links .account_option_links_img_container .account_options_links_img.basketball{
@@ -336,90 +424,142 @@ body.modal_open_img .modal_bg
     width: 18px;
     height: 18px;
     background-size: contain;
-    transform: translate(3px, 3px);
+    -webkit-transform: translate(3px, 3px);
+        -ms-transform: translate(3px, 3px);
+            transform: translate(3px, 3px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.basketball{
     background-image: url("../img/backetball.jpg");
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.covid{
-    transform: translate(-20px, -1740px);
+    -webkit-transform: translate(-20px, -1740px);
+        -ms-transform: translate(-20px, -1740px);
+            transform: translate(-20px, -1740px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.pages{
-    transform: translate(-73px, -1143px);
+    -webkit-transform: translate(-73px, -1143px);
+        -ms-transform: translate(-73px, -1143px);
+            transform: translate(-73px, -1143px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.events{
-    transform: translate(-73px, -1401px);
+    -webkit-transform: translate(-73px, -1401px);
+        -ms-transform: translate(-73px, -1401px);
+            transform: translate(-73px, -1401px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.groups{
-    transform: translate(-73px, -1041px);
+    -webkit-transform: translate(-73px, -1041px);
+        -ms-transform: translate(-73px, -1041px);
+            transform: translate(-73px, -1041px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.collect{
-    transform: translate(1px, -1633px);
+    -webkit-transform: translate(1px, -1633px);
+        -ms-transform: translate(1px, -1633px);
+            transform: translate(1px, -1633px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.listfriends{
-    transform: translate(-41px, -1612px);
+    -webkit-transform: translate(-41px, -1612px);
+        -ms-transform: translate(-41px, -1612px);
+            transform: translate(-41px, -1612px);
 }
 
 
 .account_options_links .account_option_links_img_container .account_options_links_img.games{
-    transform: translate(-75px, -1062px);
+    -webkit-transform: translate(-75px, -1062px);
+        -ms-transform: translate(-75px, -1062px);
+            transform: translate(-75px, -1062px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.reference{
-    transform: translate(-75px, -1505px);
+    -webkit-transform: translate(-75px, -1505px);
+        -ms-transform: translate(-75px, -1505px);
+            transform: translate(-75px, -1505px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.manageapp{
-    transform: translate(-75px, -1209px);
+    -webkit-transform: translate(-75px, -1209px);
+        -ms-transform: translate(-75px, -1209px);
+            transform: translate(-75px, -1209px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.oculus{
-    transform: translate(-74px, -1125px);
+    -webkit-transform: translate(-74px, -1125px);
+        -ms-transform: translate(-74px, -1125px);
+            transform: translate(-74px, -1125px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.offers{
-    transform: translate(-62px, -1676px);
+    -webkit-transform: translate(-62px, -1676px);
+        -ms-transform: translate(-62px, -1676px);
+            transform: translate(-62px, -1676px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.selgroup{
-    transform: translate(0px, -1780px);
+    -webkit-transform: translate(0px, -1780px);
+        -ms-transform: translate(0px, -1780px);
+            transform: translate(0px, -1780px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.crisisservice{
-    transform: translate(-75px, -1462px);
+    -webkit-transform: translate(-75px, -1462px);
+        -ms-transform: translate(-75px, -1462px);
+            transform: translate(-75px, -1462px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.refoundfriends{
-    transform: translate(-62px, -1612px);
+    -webkit-transform: translate(-62px, -1612px);
+        -ms-transform: translate(-62px, -1612px);
+            transform: translate(-62px, -1612px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.videosgames{
-    transform: translate(-73px, -999px);
+    -webkit-transform: translate(-73px, -999px);
+        -ms-transform: translate(-73px, -999px);
+            transform: translate(-73px, -999px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.weather{
-    transform: translate(-62px, -1759px);
+    -webkit-transform: translate(-62px, -1759px);
+        -ms-transform: translate(-62px, -1759px);
+            transform: translate(-62px, -1759px);
 }
 
 .account_options_links .account_option_links_img_container .account_options_links_img.memories{
-    transform: translate(1px, -1696px);
+    -webkit-transform: translate(1px, -1696px);
+        -ms-transform: translate(1px, -1696px);
+            transform: translate(1px, -1696px);
 }
 
 .account_options_links .account_option_links_img_container .account_options_links_img.lives{
-    transform: translate(-41px, -1654px);
+    -webkit-transform: translate(-41px, -1654px);
+        -ms-transform: translate(-41px, -1654px);
+            transform: translate(-41px, -1654px);
 }
 
 .account_options_links .account_option_links_img_container .account_options_links_img.jobs{
-    transform: translate(-74px, -1293px);
+    -webkit-transform: translate(-74px, -1293px);
+        -ms-transform: translate(-74px, -1293px);
+            transform: translate(-74px, -1293px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.recording{
-    transform: translate(-74px, -1271px);
+    -webkit-transform: translate(-74px, -1271px);
+        -ms-transform: translate(-74px, -1271px);
+            transform: translate(-74px, -1271px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.more{
-    transform: translate(-15px, -2314px);
+    -webkit-transform: translate(-15px, -2314px);
+        -ms-transform: translate(-15px, -2314px);
+            transform: translate(-15px, -2314px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.video{
-    transform: translate(-74px, -1166px);
+    -webkit-transform: translate(-74px, -1166px);
+        -ms-transform: translate(-74px, -1166px);
+            transform: translate(-74px, -1166px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.photo{
-    transform: translate(-62px, -1696px);
+    -webkit-transform: translate(-62px, -1696px);
+        -ms-transform: translate(-62px, -1696px);
+            transform: translate(-62px, -1696px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.friend{
-    transform: translate(-41px, -1613px);
+    -webkit-transform: translate(-41px, -1613px);
+        -ms-transform: translate(-41px, -1613px);
+            transform: translate(-41px, -1613px);
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.more-options{
-    transform: translate(-20px, -1885px);
+    -webkit-transform: translate(-20px, -1885px);
+        -ms-transform: translate(-20px, -1885px);
+            transform: translate(-20px, -1885px);
 }
 
 
@@ -431,26 +571,38 @@ body.modal_open_img .modal_bg
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.search{
     background-image: url("../img/fb-icons3.png");
-    transform: translate(1px, -532px);
+    -webkit-transform: translate(1px, -532px);
+        -ms-transform: translate(1px, -532px);
+            transform: translate(1px, -532px);
     height: 1000px;
 }
 .account_options_links .account_option_links_img_container .account_options_links_img.settings{
     background-image: url("../img/fb-icons3.png");
-    transform: translate(-33px, -532px);
+    -webkit-transform: translate(-33px, -532px);
+        -ms-transform: translate(-33px, -532px);
+            transform: translate(-33px, -532px);
     height: 1000px;
 }.account_options_links .account_option_links_img_container .account_options_links_img.edit{
     background-image: url("../img/fb-icons3.png");
     height: 1000px;
-    transform: translate(2px, -446px);
+    -webkit-transform: translate(2px, -446px);
+        -ms-transform: translate(2px, -446px);
+            transform: translate(2px, -446px);
 }.account_options_links .account_option_links_img_container .account_options_links_img.add{
     background-image: url("../img/fb-icons3.png");
-    transform: translate(-16px, -480px);
+    -webkit-transform: translate(-16px, -480px);
+        -ms-transform: translate(-16px, -480px);
+            transform: translate(-16px, -480px);
     height: 1000px;
 }
 .foldable_event{
     color: var(--primary);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 10px;
     outline: none;
 }
@@ -492,8 +644,13 @@ body.modal_open_img .modal_bg
 .main_content .card{ 
     border: 1px solid var(--border-gray-color);
     background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     border-radius: 5px;
     color: var(--secondary-color);
     font-weight: 700;
@@ -507,9 +664,15 @@ body.modal_open_img .modal_bg
     background-color: var(--gray-medium);
     padding: .5em;
     border-bottom: 1px solid var(--border-gray-color);   
+    display: -webkit-box;   
+    display: -ms-flexbox;   
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .new_post_head .account_options_links .account_option_links_img_container .account_options_links_img
 {
@@ -519,14 +682,22 @@ body.modal_open .new_post_head .account_options_links .account_option_links_img_
 {
     display: inline-block;
     background-image: url("../img/fb-icons3.png");
-    transform: translate(-11px, -243px);
+    -webkit-transform: translate(-11px, -243px);
+        -ms-transform: translate(-11px, -243px);
+            transform: translate(-11px, -243px);
 }
 .main_content .card_body
 {
     padding: 1em 1em 0 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .main_content .separator
 {
@@ -544,7 +715,9 @@ body.modal_open .new_post_head .account_options_links .account_option_links_img_
 
 .main_content .card_body .new_post
 {
-    flex-grow: 2;
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
     border: none;
     margin-left: 1.5em;
     resize: none;
@@ -555,7 +728,9 @@ body.modal_open .new_post_head .account_options_links .account_option_links_img_
     -ms-overflow-style: none;
     scrollbar-width: none; 
     width: 100%;
-    transform: translateY(5px);
+    -webkit-transform: translateY(5px);
+        -ms-transform: translateY(5px);
+            transform: translateY(5px);
 }
 .main_content .card_body .new_post::-webkit-scrollbar
 {
@@ -564,9 +739,15 @@ body.modal_open .new_post_head .account_options_links .account_option_links_img_
 
 .main_content .card_footer ul
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0 15px;
     padding-bottom: .8em;
     font-size: 12px;
@@ -581,22 +762,40 @@ body.modal_open .new_post_head .account_options_links .account_option_links_img_
     background-color: var(--gray-medium);
     border-radius: 20px;
     padding: .5em;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .main_content .card_footer .account_options__items .account_options_links
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .main_content .card_header
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: .6em 1em;
     font-size: 14px;
 }
@@ -608,10 +807,16 @@ body.modal_open .new_post_head .account_options_links .account_option_links_img_
 }
 .main_content .room_card{border-radius: 10px;}
 .main_content .room_card_body{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     overflow-x: auto;
-    align-items: center;
-    justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     padding: .6em 1em;
     /* TODO HIDE SCROLLBAR */
 }
@@ -645,9 +850,17 @@ body.modal_open .new_post_head .account_options_links .account_option_links_img_
     border-radius: 50%;
     background-color: rgba(0,0,0,.45);
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 
 }
 .main_content .room_card_body .room:not(:first-child) .room_overlay
@@ -680,9 +893,15 @@ body.modal_open .new_post_head .account_options_links .account_option_links_img_
     overflow-x: auto;
 }
 .stories_card .stories_card_body ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     color: #fff;
 }
 .stories_card .stories_card_body_item:not(:last-child)
@@ -708,13 +927,15 @@ body.modal_open .new_post_head .account_options_links .account_option_links_img_
     background-repeat: no-repeat;
     height: 100%;
     /* Firefox */
-    -moz-transition: transform .3s;
     /* WebKit */
     -webkit-transition: transform .3s;
     /* Opera */
     -o-transition: transform .3s;
     /* Standard */
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
     transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
 }
 .stories_card  .stories_card_body_item:not(:first-child) .storie_bg_image
 {
@@ -728,6 +949,8 @@ body.modal_open .new_post_head .account_options_links .account_option_links_img_
     height: 100%;
     width: 100%;
     opacity: 0;
+    -webkit-transition: opacity .3s;
+    -o-transition: opacity .3s;
     transition: opacity .3s;
 }
 .stories_card .storie_bg_image:hover .overlay{
@@ -735,7 +958,9 @@ body.modal_open .new_post_head .account_options_links .account_option_links_img_
 }
 .stories_card .storie_bg_image:hover
 {
-    transform: scale(1.04);
+    -webkit-transform: scale(1.04);
+        -ms-transform: scale(1.04);
+            transform: scale(1.04);
 }
 .stories_card  .stories_card_body_item .add_story{display: none;}
 .stories_card  .stories_card_body_item .profile_img,
@@ -751,10 +976,18 @@ body.modal_open .new_post_head .account_options_links .account_option_links_img_
 .stories_card  .stories_card_body_item:first-child .profile_img img{display: none;}
 .stories_card  .stories_card_body_item:first-child .add_story{
     background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translate(-8px,-8px);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: translate(-8px,-8px);
+        -ms-transform: translate(-8px,-8px);
+            transform: translate(-8px,-8px);
 }
 .stories_card  .stories_card_body_item:first-child .add_story::after
 {
@@ -777,18 +1010,30 @@ body.modal_open .new_post_head .account_options_links .account_option_links_img_
 .stories_card .stories_card_body_item .storie_content
 {
     padding: 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
     z-index: 1;
 }
 
 /* END STORIE */
 .main_content .post_card .post_card_head{
     padding: .4em .8em ;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     color: var(--gray-color);
     font-weight: 400;
     font-size: 13px;
@@ -799,8 +1044,12 @@ body.modal_open .new_post_head .account_options_links .account_option_links_img_
 .post_card .separator{margin:.8em auto .4em auto}
 .main_content .post_card .post_card_body .post_author
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0 .8em;
     padding-bottom: 1em;
     color: var(--primary);
@@ -824,12 +1073,16 @@ body.modal_open .new_post_head .account_options_links .account_option_links_img_
     content: ".";
     display: inline-block;
     margin-left: 5px;
-    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+        -ms-transform: translateY(-2px);
+            transform: translateY(-2px);
 }
 
 .main_content .post_card .post_author .account_options_links .account_option_links_img_container .account_options_links_img
 {
-    transform: translate(-68px, -2178px);
+    -webkit-transform: translate(-68px, -2178px);
+        -ms-transform: translate(-68px, -2178px);
+            transform: translate(-68px, -2178px);
 }
 .main_content .post_card .post_description
 {
@@ -843,17 +1096,27 @@ body.modal_open .new_post_head .account_options_links .account_option_links_img_
 }
 .post_likes_comments
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-weight: 400;
     padding: .5em .8em;
     padding-bottom: 0;
 }
 .likes_count,
 .share_comments_counts{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .likes_number,.share{
     margin-left: 10px;
@@ -871,35 +1134,53 @@ body.modal_open .new_post_head .account_options_links .account_option_links_img_
 }
 .post_likes_comments .account_options_links .account_option_links_img_container .account_options_links_img.likes_thumb
 {
-    transform: translate(1px, -2031px);
+    -webkit-transform: translate(1px, -2031px);
+        -ms-transform: translate(1px, -2031px);
+            transform: translate(1px, -2031px);
 }
 .post_likes_comments .account_options_links .account_option_links_img_container .account_options_links_img.likes_love
 {
-    transform: translate(-20px, -2032px);
+    -webkit-transform: translate(-20px, -2032px);
+        -ms-transform: translate(-20px, -2032px);
+            transform: translate(-20px, -2032px);
 }
 .post_likes_comments .account_options_links .account_option_links_img_container .account_options_links_img.likes_solidarity
 {
-    transform: translate(-62px, -2032px);
+    -webkit-transform: translate(-62px, -2032px);
+        -ms-transform: translate(-62px, -2032px);
+            transform: translate(-62px, -2032px);
 }
 
 .post_card_footer .account_options_links .account_option_links_img_container .account_options_links_img.like
 {
-    transform: translate(-203px, -75px);
+    -webkit-transform: translate(-203px, -75px);
+        -ms-transform: translate(-203px, -75px);
+            transform: translate(-203px, -75px);
 }
 .post_card_footer .account_options_links .account_option_links_img_container .account_options_links_img.comment
 {
-    transform: translate(-128px, -75px);
+    -webkit-transform: translate(-128px, -75px);
+        -ms-transform: translate(-128px, -75px);
+            transform: translate(-128px, -75px);
 }
 .post_card_footer .account_options_links .account_option_links_img_container .account_options_links_img.share
 {
-    transform: translate(-272px, -75px);
+    -webkit-transform: translate(-272px, -75px);
+        -ms-transform: translate(-272px, -75px);
+            transform: translate(-272px, -75px);
 }
 
 .post_card .post_card_footer ul
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: .2em .8em .8em 4.5em;
 }
 .post_card .post_card_footer img{
@@ -909,7 +1190,9 @@ body.modal_open .new_post_head .account_options_links .account_option_links_img_
 }
 .main_container .main_right_sidebar
 {
-    flex: none;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
     width: 310px;
     font-size: 12px;
     color: var(--primary);
@@ -917,21 +1200,34 @@ body.modal_open .new_post_head .account_options_links .account_option_links_img_
 .main_right_sidebar .min_card{
     background-color: #fff;
     padding: 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .main_right_sidebar .min_card .lang_list
 {
-    flex-grow: 2;
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .main_right_sidebar li:not(:last-child)::after{
     content: ".";
     display: inline-block;
     margin: 0 5px;
-    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+        -ms-transform: translateY(-2px);
+            transform: translateY(-2px);
 }
 .main_right_sidebar li:not(.selected_lang)
 {
@@ -943,9 +1239,12 @@ body.modal_open .new_post_head .account_options_links .account_option_links_img_
     cursor: default;
 }
 .main_right_sidebar .notices{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: .7em 1em 0 1em;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     color: var(--light-gray-color);
 }
 
@@ -989,8 +1288,12 @@ body.modal_open .new_post_head .account_options_links .account_option_links_img_
 }
 .contacts .list_friends li,
 .contacts .list_friends li div{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .contacts .list_friends li.online .logout_since{
@@ -1005,7 +1308,9 @@ body.modal_open .new_post_head .account_options_links .account_option_links_img_
 }
 
 .contacts .list_friends li{
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     line-height: 35px;
     margin: 10px 0;
     color: var(--secondary-color);
@@ -1015,7 +1320,8 @@ body.modal_open .new_post_head .account_options_links .account_option_links_img_
     margin-bottom: 20px;
 }
 .contacts .list_friends .logout_since{
-    align-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
     color: var(--gray-color);
 }
 
@@ -1028,8 +1334,12 @@ body.modal_open .new_post_head .account_options_links .account_option_links_img_
 }
 .contacts .wrapper_form .search_container
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     overflow: hidden;
 }
 
@@ -1037,7 +1347,9 @@ body.modal_open .new_post_head .account_options_links .account_option_links_img_
     border: none;
     padding: .5em;
     max-width: 40%;
-    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+        -ms-transform: translateY(-2px);
+            transform: translateY(-2px);
 }
 .contacts .wrapper_form .account_options_links
 {
