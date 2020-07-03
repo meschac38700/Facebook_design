@@ -59,3 +59,26 @@ if(!window.location.origin.includes("127.0.0.1"))
             }
         });
 }
+
+// New post focus display new_post field as a modal
+let exit_modal_mode = document.querySelector(".card_head .account_options_links");
+exit_modal_mode.addEventListener("click", ()=>{
+    document.body.classList.remove("new_post_focused");
+    let modal_bg = document.querySelector(".modal_bg");
+    document.body.removeChild(modal_bg);
+});
+let new_post_field = document.querySelector(".card.new_post_card #post.new_post");
+new_post_field.addEventListener("focus", () =>
+{
+    //<div class="modal_bg"></div>
+    let modal_bg = document.createElement("DIV");
+    modal_bg.classList.add("modal_bg")
+
+    modal_bg.addEventListener("click", ()=>{
+        document.body.classList.remove("new_post_focused");
+        document.body.removeChild(modal_bg);
+    })
+
+    document.body.classList.add("new_post_focused");
+    document.body.prepend(modal_bg)
+}); 
