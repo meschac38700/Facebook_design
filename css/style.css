@@ -830,6 +830,21 @@ body.modal_open .new_post_head .account_options_links .account_option_links_img_
     margin-right: 15px;
     cursor: pointer;
 }
+/* .main_content .room_card_body .room .info
+{
+    display: block;
+    color: #FFF;
+    background-color: rgba(0,0,0,.7);
+    position: absolute;
+}
+.main_content .room_card_body .room .info .title
+{
+    font-weight: 600;
+}
+.main_content .room_card_body .room:hover .info
+{
+    opacity: 1;
+} */
 .main_content .room_card_body .room:last-child{
     margin-right: 0;
 }

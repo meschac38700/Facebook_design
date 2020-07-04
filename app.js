@@ -35,7 +35,7 @@ left_sidebar_items.forEach(item =>
 let all_friends_img = document.querySelectorAll(".contacts .list_friends .profile_img");
 let all_room_img = document.querySelectorAll(".room_card .room_card_body .room:not(:first-child) img");
 let storie_img = document.querySelectorAll(".stories_card_body_item .profile_img img");
-let storie_bg_image = document.querySelectorAll(".stories_card_body_item .storie_bg_image")
+let storie_bg_image = document.querySelectorAll(".stories_card_body_item:not(:first-child) .storie_bg_image")
 let i = 0;
 if(!window.location.origin.includes("127.0.0.1"))
 {
